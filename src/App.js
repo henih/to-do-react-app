@@ -1,30 +1,41 @@
 import { useState } from "react";
 import "./App.css";
+import Input from "./Input.js";
 
 export default function App() {
-  const [list, setList] = useState("");
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    alert(list);
-  }
-
-  function updateList(event) {
-    setList(event.target.value);
-  }
+  
 
   return (
     <div className="mt-5 App text-center">
-      <h1>🚀 Achieve anything</h1>
-      <form onSubmit={handleSubmit} className="">
-        <input
-          className="m-3 w-50 p-2"
-          type="text"
-          placeholder="What tasks do I have to achieve?"
-          onChange={updateList}
-        ></input>
-        <input type="submit" value="Add" className="p-2"></input>
-      </form>
+      <header>
+        <h1>🚀 Achieve anything</h1>
+      </header>
+      <main>
+        <Input />
+      </main>
+      <footer>
+        <p>
+          <small>
+            Coded by{" "}
+            <a
+              href="mailto:horvath.henriett@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Henriett Horvath
+            </a>{" "}
+            & available open-sourced on{" "}
+            <a
+              href="https://github.com/henih/to-do-react-app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              GitHub{" "}
+            </a>
+          </small>
+        </p>
+      </footer>
     </div>
   );
 }
