@@ -1,0 +1,23 @@
+ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ul btn {
+  margin: 20px;
+}
+
+.task-overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  justify-content: center;
+}
+
+.to-do-list,
+.completed-tasks {
+  background-color: lightblue;
+  border-radius: 20px;
+  padding: 20px;
+}
